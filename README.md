@@ -1,2 +1,2 @@
 # cronos-star
-Cronômetro feito com HTML, CSS e JavaScript
+Relógio feito com HTML, CSS e JavaScript
