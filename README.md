@@ -2,13 +2,13 @@
 
 ## Descrição
 
-Cronos Star é um aplicativo de relógio desenvolvido em HTML, CSS e JavaScript. O aplicativo exibe a hora atual com precisão de milissegundos e possui um design responsivo que se adapta a diferentes tamanhos de tela.
+Cronos Star é um aplicativo de relógio desenvolvido em HTML, CSS e JavaScript. O aplicativo exibe a hora atual de alguns países no mundo e possui um design responsivo que se adapta a diferentes tamanhos de tela.
 
 ![Ícone do site](./img/clock-logo.png)
 
 ## Funcionalidades
 
-- Exibição da hora atual com precisão de milissegundos.
+- Exibição da hora atual dos país selecionado.
 - Design responsivo para telas pequenas, médias e grandes.
 
 ## Pré-requisitos

@@ -1,29 +1,21 @@
-let clockActivate = false;
-let cronometerActivate = false;
 let clockInterval;
-let stopwatchInterval;
 
-function displayTime() {
+function displayTimeWithOffset(offset) {
     const cronosDiv = document.getElementById("cronos");
     const now = new Date();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    const seconds = now.getSeconds().toString().padStart(2, "0");
-    const miliseconds = now.getMilliseconds().toString().padStart(3, "0");
+    const adjustedTime = new Date(now.getTime() + offset * 3600000);
+    const hours = adjustedTime.getHours().toString().padStart(2, "0");
+    const minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+    const seconds = adjustedTime.getSeconds().toString().padStart(2, "0");
     cronosDiv.innerText = `${hours}:${minutes}:${seconds}`;
 }
 
-function displayHours() {
-    clockActivate = true;
-    cronometerActivate = false;
+function displayHours(offset) {
     clearInterval(clockInterval);
     const cronosDiv = document.getElementById("cronos");
     cronosDiv.innerHTML = "";
 
-    const hour = new Date().getHours().toString().padStart(2,"0");
-    const minute = new Date().getMinutes().toString().padStart(2,"0");
-    const second = new Date().getSeconds().toString().padStart(2,"0");
-    document.getElementById("cronos").innerText = hour + ":" + minute + ":" + second;
+    displayTimeWithOffset(offset);
 
     for (let i = 1; i <= 12; i++) {
         const hourMarker = document.createElement("div");
@@ -32,11 +24,42 @@ function displayHours() {
         hourMarker.style.transform = `rotate(${angle}deg)`;
         cronosDiv.appendChild(hourMarker);
     }
-    document.getElementById("btn-clock").style.display = "inline-block";
-    clockInterval = setInterval(displayTime, 1000);
+    clockInterval = setInterval(() => displayTimeWithOffset(offset), 1000);
     document.querySelector("h2").style.display = "block";
 }
 
-document.getElementById("btn-clock").addEventListener("click", () => {
-    displayHours();
+function selectButton(buttonId) {
+    // Remove a classe "selected" de todos os botões
+    const buttons = document.getElementsByClassName("btn-primary");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("selected");
+    }
+
+    // Adiciona a classe "selected" ao botão clicado
+    document.getElementById(buttonId).classList.add("selected");
+}
+
+document.getElementById("btn-brazil").addEventListener("click", () => {
+    selectButton("btn-brazil");
+    displayHours(0);
+});
+document.getElementById("btn-portugal").addEventListener("click", () => {
+    selectButton("btn-portugal");
+    displayHours(+4);
+});
+document.getElementById("btn-russia").addEventListener("click", () => {
+    selectButton("btn-russia");
+    displayHours(+6);
+});
+document.getElementById("btn-india").addEventListener("click", () => {
+    selectButton("btn-india");
+    displayHours(+8.5);
+});
+document.getElementById("btn-japan").addEventListener("click", () => {
+    selectButton("btn-japan");
+    displayHours(+12);
+});
+document.getElementById("btn-mexico").addEventListener("click", () => {
+    selectButton("btn-mexico");
+    displayHours(-3);
 });

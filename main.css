@@ -53,6 +53,16 @@ h1 {
     margin: 5px;
 }
 
+.btn-primary:hover {
+    background-color: #444;
+}
+
+.btn-primary.selected {
+    background-color: #555;
+    border-color: #555;
+    border: 1px solid yellow;
+}
+
 #cronos {
     font-size: 90px;
     font-family: 'DS Digital', Arial, Helvetica, sans-serif;
@@ -71,39 +81,48 @@ h1 {
 }
 
 @media (max-width: 640px) {
+
     /* Estilos para telas pequenas */
     #cronos {
         font-size: 60px;
     }
+
     h1 {
         font-size: 30px;
     }
+
     #cronos-main {
         padding: 50px;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1007px) {
+
     /* Estilos para telas médias */
     #cronos {
         font-size: 80px;
     }
+
     h1 {
         font-size: 35px;
     }
+
     #cronos-main {
         padding: 100px;
     }
 }
 
 @media (min-width: 1008px) {
+
     /* Estilos para telas grandes */
     #cronos {
         font-size: 90px;
     }
+
     h1 {
         font-size: 40px;
     }
+
     #cronos-main {
         padding: 150px;
     }

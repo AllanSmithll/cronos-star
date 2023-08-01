@@ -6,7 +6,8 @@
     <title>Cronos Star</title>
     <link id="favicon" rel="icon" type="image/x-icon" href="./img/clock-favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css"></link>
+    <link rel="stylesheet" href="main.css">
+    </link>
 </head>
 <body>
     <header class="bg-dark text-white">
@@ -16,11 +17,20 @@
     </header>
     <main id="cronos-main">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button id="btn-clock" type="button" class="btn btn-primary">Relógio</button>
-          </div>
-        <h2 style="display: none;">Hora atual</h2>
+            <button id="btn-brazil" type="button" class="btn btn-primary" title="Brasil"><img src="./img/flat/32/Brazil.png"
+                    alt="Brazil's flag"></button>
+            <button id="btn-portugal" type="button" class="btn btn-primary" title="Portugal"><img src="./img/flat/32/Portugal.png"
+                    alt="Portugal's flag"></button>
+            <button id="btn-russia" type="button" class="btn btn-primary" title="Rússia"><img src="./img/flat/32/Russia.png"
+                    alt="Russia's flag"></button>
+            <button id="btn-india" type="button" class="btn btn-primary" title="Índia"><img src="./img/flat/32/India.png"
+                    alt="India's flag"></button>
+            <button id="btn-japan" type="button" class="btn btn-primary" title="Japão"><img src="./img/flat/32/Japan.png"
+                    alt="Japan's flag"></button>
+        </div>
+        <h2 style="display: none;">Horário no país selecionado</h2>
         <div id="cronos"></div>
-    </main> 
+    </main>
     <footer id="footer" class="bg-dark text-white">
         <div class="container text-center">
             <p>&copy; 2023 Cronos Star. Todos os direitos reservados.</p>
