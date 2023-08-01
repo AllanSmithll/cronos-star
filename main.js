@@ -31,6 +31,11 @@ function displayHours() {
         hourMarker.style.transform = `rotate(${angle}deg)`;
         cronosDiv.appendChild(hourMarker);
     }
+    document.getElementById("btn-stopwatch").style.display = "inline-block";
+    document.getElementById("btn-pause").style.display = "none";
+    document.getElementById("btn-continue").style.display = "none";
+    document.getElementById("btn-clock").style.display = "inline-block";
+
     if (cronometerActivate == true && cronometerActivate == false) {
         stopwatchInterval = setInterval(displayHours, 1000);
     }
@@ -43,6 +48,23 @@ function resetClock() {
     clockActivate = false;
     clearInterval(clockInterval);
     clearInterval(stopwatchInterval);
+
+    document.getElementById("btn-stopwatch").style.display = "inline-block";
+    document.getElementById("btn-pause").style.display = "inline-block";
+    document.getElementById("btn-continue").style.display = "inline-block";
+    document.getElementById("btn-clock").style.display = "inline-block";
+}
+
+function pauseStopwatch() {
+    clearInterval(stopwatchInterval);
+    document.getElementById("btn-pause").style.display = "none";
+    document.getElementById("btn-continue").style.display = "inline-block";
+}
+
+function continueStopwatch() {
+    stopwatchInterval = setInterval(displayHours, 1000);
+    document.getElementById("btn-pause").style.display = "inline-block";
+    document.getElementById("btn-continue").style.display = "none";
 }
 
 document.getElementById("btn-clock").addEventListener("click", () => {
@@ -51,7 +73,11 @@ document.getElementById("btn-clock").addEventListener("click", () => {
         clearInterval(stopwatchInterval);
         clockInterval = setInterval(displayTime, 1000);
     }
+    document.getElementById("btn-pause").style.display = "none";
+    document.getElementById("btn-continue").style.display = "none";
 });
+
 document.getElementById("btn-stopwatch").addEventListener("click", () => {
     resetClock();
 });
+

@@ -61,3 +61,42 @@ h1 {
     color: #fff;
     padding: 10px;
 }
+
+@media (max-width: 640px) {
+    /* Estilos para telas pequenas */
+    #cronos {
+        font-size: 60px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    #cronos-main {
+        padding: 100px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+    /* Estilos para telas médias */
+    #cronos {
+        font-size: 80px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    #cronos-main {
+        padding: 150px;
+    }
+}
+
+@media (min-width: 1008px) {
+    /* Estilos para telas grandes */
+    #cronos {
+        font-size: 90px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #cronos-main {
+        padding: 200px;
+    }
+}
