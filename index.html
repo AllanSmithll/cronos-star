@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronos Star</title>
-    <link rel="stylesheet" href="main.css"></link>
     <link id="favicon" rel="icon" type="image/x-icon" href="./img/clock-favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css"></link>
 </head>
 <body>
-    <header>
-        <img src="./img/clock-logo.png" alt="Ícone do site">
-        <h1>CRONOS STAR</h1>
+    <header class="bg-dark text-white">
+        <div class="container d-flex justify-content-center align-items-center">
+            <img src="./img/clock-logo.png" alt="Ícone do site" class="mr-2">
+            <h1 class="m-0">CRONOS STAR</h1>
+        </div>
     </header>
     <main id="cronos-main">
         <div class="btn-group" role="group" aria-label="Basic example">
@@ -20,8 +23,10 @@
         <h2 style="display: none;">Hora atual</h2>
         <div id="cronos"></div>
     </main> 
-    <footer id="footer">
-        <p>&copy; 2023 Cronos Star. Todos os direitos reservados.</p>
+    <footer id="footer" class="bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2023 Cronos Star. Todos os direitos reservados.</p>
+        </div>
     </footer>
     <script src="main.js"></script>
 </body>
