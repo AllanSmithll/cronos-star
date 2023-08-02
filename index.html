@@ -33,9 +33,16 @@
     </main>
     <footer id="footer" class="bg-dark text-white">
         <div class="container text-center">
-            <p>&copy; 2023 Cronos Star. Todos os direitos reservados.</p>
+            <p>&copy; Copyright 2023<span id="year"></span> Cronos Star. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script src="main.js"></script>
+    <script>
+        const spanYearFooter = document.getElementById("year");
+        const ano = new Date().getFullYear();
+        if (ano != 2023) {
+            spanYearFooter.innerText = "-"+ano;
+        }
+    </script>
 </body>
 </html>
