@@ -29,13 +29,10 @@ function displayHours(offset) {
 }
 
 function selectButton(buttonId) {
-    // Remove a classe "selected" de todos os botões
     const buttons = document.getElementsByClassName("btn-primary");
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove("selected");
     }
-
-    // Adiciona a classe "selected" ao botão clicado
     document.getElementById(buttonId).classList.add("selected");
 }
 
@@ -58,8 +55,4 @@ document.getElementById("btn-india").addEventListener("click", () => {
 document.getElementById("btn-japan").addEventListener("click", () => {
     selectButton("btn-japan");
     displayHours(+12);
-});
-document.getElementById("btn-mexico").addEventListener("click", () => {
-    selectButton("btn-mexico");
-    displayHours(-3);
 });
