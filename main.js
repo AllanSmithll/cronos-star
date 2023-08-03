@@ -17,13 +17,6 @@ function displayHours(offset) {
 
     displayTimeWithOffset(offset);
 
-    for (let i = 1; i <= 12; i++) {
-        const hourMarker = document.createElement("div");
-        hourMarker.classList.add("hour-marker");
-        const angle = (i - 3) * 30;
-        hourMarker.style.transform = `rotate(${angle}deg)`;
-        cronosDiv.appendChild(hourMarker);
-    }
     clockInterval = setInterval(() => displayTimeWithOffset(offset), 1000);
     document.querySelector("h2").style.display = "block";
 }
