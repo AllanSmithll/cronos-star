@@ -80,6 +80,14 @@ h1 {
     width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+.fa-github {
+    color: #fff;
+}
+
 @media (max-width: 640px) {
 
     /* Estilos para telas pequenas */
