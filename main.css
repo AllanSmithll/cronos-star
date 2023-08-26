@@ -58,9 +58,9 @@ h1 {
 }
 
 .btn-primary.selected {
-    background-color: #555;
+    background-color: #1D6999;
     border-color: #555;
-    border: 1px solid yellow;
+    border: 1px solid #43A7E6;
 }
 
 #cronos {
